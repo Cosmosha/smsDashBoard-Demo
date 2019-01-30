@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="365.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="messagedashboard.DashBoardController">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="365.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <ImageView fx:id="imgSettings" layoutX="31.0" layoutY="28.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgAdd" layoutX="96.0" layoutY="28.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/member.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgMsg" layoutX="150.0" layoutY="28.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/message.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgContact" layoutX="206.0" layoutY="28.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPower" layoutX="255.0" layoutY="28.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/shutdown.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgHide" fitHeight="35.0" fitWidth="27.0" layoutX="305.0" layoutY="28.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Hide.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="settings" layoutX="-2.0" layoutY="89.0" prefHeight="427.0" prefWidth="365.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="24.0" prefHeight="28.0" prefWidth="153.0" text="IP ADDRESS ENABLED" textFill="#fff3f3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton layoutX="234.0" layoutY="38.0" text="On" textFill="#eda678" toggleColor="#eda678" toggleLineColor="#eda478eb" />
+            <Label layoutX="34.0" layoutY="52.0" prefHeight="56.0" prefWidth="188.0" text="Enable IP address Configure&#10;communication between &#10;APPs&#10;" textFill="#cdc5c5" />
+            <Label layoutX="34.0" layoutY="159.0" prefHeight="28.0" prefWidth="153.0" text="AUTO-SUBSCRIBE" textFill="#fff3f3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton layoutX="234.0" layoutY="159.0" text="On" textFill="#eda678" toggleColor="#eda678" toggleLineColor="#eda478eb" />
+            <Label layoutX="34.0" layoutY="180.0" prefHeight="35.0" prefWidth="188.0" text="Auto subscribe to this address&#10;&#10;" textFill="#cdc5c5" />
+            <TextField layoutX="36.0" layoutY="120.0" promptText="Enter IP Address" />
+            <Label layoutX="220.0" layoutY="124.0" text="Configure IP Address" textFill="#eda678" />
+            <Separator layoutX="35.0" layoutY="239.0" opacity="0.35" prefHeight="3.0" prefWidth="296.0" />
+            <JFXSlider layoutX="36.0" layoutY="300.0" prefHeight="14.0" prefWidth="304.0" />
+            <Label layoutX="35.0" layoutY="266.0" prefHeight="28.0" prefWidth="153.0" text="SCREEN BRIGHTNESS" textFill="#fff3f3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXCheckBox checkedColor="#eda678" layoutX="36.0" layoutY="340.0" text="Auto Brightness" textFill="#c9c4c4" />
+            <JFXButton fx:id="savebtn" layoutX="197.0" layoutY="383.0" prefHeight="28.0" prefWidth="135.0" style="-fx-background-color: eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Save" textFill="#1b1a1a" />
+            <JFXButton fx:id="cancelBtn" layoutX="35.0" layoutY="383.0" onAction="#cancelBtn" prefHeight="28.0" prefWidth="135.0" style="-fx-background-color: #515D6D; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Cancel" textFill="#c9c7c7" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="user" layoutY="90.0" prefHeight="427.0" prefWidth="365.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Circle fill="#cacbcc4a" layoutX="183.0" layoutY="133.0" radius="32.0" stroke="#ebe9e9" strokeType="INSIDE" strokeWidth="3.0" />
+            <ImageView fitHeight="44.0" fitWidth="41.0" layoutX="163.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/male.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="113.0" layoutY="44.0" prefHeight="20.0" prefWidth="166.0" text="Preaching Christ Family" textFill="#e8e6e6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="264.0" prefHeight="20.0" prefWidth="73.0" text="Follow On:" textFill="#e8e6e6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="133.0" layoutY="220.0" prefHeight="20.0" prefWidth="100.0" text="Cosmos Hagan" textFill="#e8e6e6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#8e80b5" glyphName="FACEBOOK" layoutX="147.0" layoutY="318.0" size="30.0" wrappingWidth="25.000008195638657" />
+            <FontAwesomeIconView fill="#e8dada" glyphName="TWITTER" layoutX="183.0" layoutY="322.0" size="30.0" wrappingWidth="25.000008195638657" />
+            <Label layoutX="141.0" layoutY="194.0" prefHeight="20.0" prefWidth="84.0" text="Designed By:" textFill="#e8e6e6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="message" layoutY="89.0" prefHeight="427.0" prefWidth="365.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <TextArea fx:id="MsgTxtB" layoutX="44.0" layoutY="186.0" prefHeight="132.0" prefWidth="281.0" promptText="Text Message Here" />
+            <JFXButton fx:id="msgButton" layoutX="117.0" layoutY="351.0" onAction="#SendMsgBtn" prefHeight="28.0" prefWidth="135.0" style="-fx-background-color: eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Send" textFill="#1b1a1a" />
+            <TextField fx:id="conTxt" layoutX="45.0" layoutY="139.0" prefHeight="31.0" prefWidth="281.0" promptText="Enter Contact Number(s)" />
+            <Text fill="#eda678" layoutX="75.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send Message to All Contacts" wrappingWidth="165.9999965876341" />
+            <JFXCheckBox layoutX="241.0" layoutY="64.0" prefHeight="17.0" prefWidth="41.0" />
+            <Text fill="#d7cec8" layoutX="117.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEND TEXT MESSAGE" wrappingWidth="152.99999981187284">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="114.0" layoutY="31.0" prefHeight="3.0" prefWidth="143.0" />
+            <Text fill="#eda678" layoutX="69.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send Message to Only Members" wrappingWidth="177.9999965876341" />
+            <JFXCheckBox layoutX="241.0" layoutY="98.0" prefHeight="17.0" prefWidth="1.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="member" layoutY="90.0" prefHeight="427.0" prefWidth="365.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <TableView layoutX="7.0" layoutY="159.0" prefHeight="264.0" prefWidth="351.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="No." />
+                <TableColumn prefWidth="75.0" text="Name" />
+                  <TableColumn prefWidth="75.0" text="Phone Number" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="phoneTxt" layoutX="192.0" layoutY="62.0" prefHeight="31.0" prefWidth="153.0" promptText="Phone" />
+            <TextField fx:id="nameTxt" layoutX="14.0" layoutY="62.0" prefHeight="31.0" prefWidth="153.0" promptText="Name" />
+            <JFXButton fx:id="addBtn" layoutX="266.0" layoutY="21.0" onAction="#addBtn" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Add" textFill="#1b1a1a" />
+            <JFXButton fx:id="clearBtn" layoutX="183.0" layoutY="21.0" onAction="#clearBtn" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: #515D6D; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Clear" textFill="#c9c7c7" />
+            <Text fill="#d7cfcf" layoutX="30.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Contact" wrappingWidth="73.00000108778477">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#d7cfcf" layoutX="146.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact List" underline="true" wrappingWidth="73.00000108778477">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

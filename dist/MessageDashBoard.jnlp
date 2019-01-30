@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MessageDashBoard.jnlp">
+  <information>
+    <title>MessageDashBoard</title>
+    <vendor>cosmo</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MessageDashBoard.jar" size="41754" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\jfoenix-1.2.0.jar" size="2347998" download="eager" />
+    <jar href="lib\jfxtras-controls-8.0-r5.jar" size="267283" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MessageDashBoard" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="messagedashboard.MessageDashBoard"  name="MessageDashBoard" />
+  <update check="always"/>
+</jnlp>
